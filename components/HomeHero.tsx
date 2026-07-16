@@ -2,7 +2,7 @@ import Link from "next/link";
 import { assetExists } from "@/lib/assets";
 import PhotoPlaceholder from "./PhotoPlaceholder";
 
-const HAS_HERO_IMAGE = assetExists("home-hero.png");
+const HAS_HERO_IMAGE = assetExists("home-hero.webp");
 
 const TRUST_ITEMS = [
   { icon: "◆", label: "Female Owned\n& Operated" },
@@ -18,7 +18,7 @@ export default function HomeHero() {
       {HAS_HERO_IMAGE ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src="/assets/home-hero.png"
+          src="/assets/home-hero.webp"
           alt="S² Automotive — Driven by Integrity. Focused on You. Gainesville, GA"
           style={{ display: "block", width: "100%", height: "auto" }}
         />

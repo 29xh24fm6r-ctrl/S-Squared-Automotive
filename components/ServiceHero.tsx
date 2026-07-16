@@ -1,7 +1,7 @@
 import { assetExists } from "@/lib/assets";
 import { site } from "@/lib/theme";
 
-const HAS_HERO_IMAGE = assetExists("service-header.png");
+const HAS_HERO_IMAGE = assetExists("service-header.webp");
 
 const BADGES = ["Certified Technicians", "Same-Day Service", "All Makes & Models"];
 
@@ -11,7 +11,7 @@ export default function ServiceHero() {
       {HAS_HERO_IMAGE ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src="/assets/service-header.png"
+          src="/assets/service-header.webp"
           alt="S² Automotive Service Center — Gainesville, GA"
           style={{ display: "block", width: "100%", height: "auto" }}
         />

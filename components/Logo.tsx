@@ -1,15 +1,15 @@
 import { assetExists } from "@/lib/assets";
 
-const HAS_LOGO_FILE = assetExists("s2-logo.png");
+const HAS_LOGO_FILE = assetExists("s2-logo.webp");
 
 export default function Logo({ height = 120 }: { height?: number }) {
   if (HAS_LOGO_FILE) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src="/assets/s2-logo.png" alt="S² Automotive" style={{ height, width: "auto", display: "block" }} />;
+    return <img src="/assets/s2-logo.webp" alt="S² Automotive" style={{ height, width: "auto", display: "block" }} />;
   }
 
   // On-brand placeholder mark until the client's real logo file is dropped
-  // into /public/assets/s2-logo.png (see README "Assets" section).
+  // into /public/assets/s2-logo.webp (see README "Assets" section).
   const iconSize = Math.round(height * 0.58);
   const wordSize = Math.max(10, Math.round(height * 0.1));
 

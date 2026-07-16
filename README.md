@@ -22,18 +22,9 @@ Visit `http://localhost:3000`.
 npm run build && npm run start   # production build
 ```
 
-## Dropping in real assets
+## Assets
 
-The client's real logo, hero banners, QR code, and vehicle/showroom photos weren't available at build time. Every page currently falls back to an on-brand placeholder (a gold-gradient monogram for the logo, a CSS-recreated hero, striped placeholder boxes for photos).
-
-Drop the real files into `public/assets/` using these exact names and they'll be picked up automatically on the next build — no code changes needed:
-
-| File | Used on |
-|---|---|
-| `public/assets/s2-logo.png` | Header + footer (all pages) |
-| `public/assets/home-hero.png` | Home hero banner |
-| `public/assets/service-header.png` | Service hero banner |
-| `public/assets/s2-qr.png` | Home "Visit Us" contact card |
+The logo, home hero banner, service hero banner, and QR code are real client assets, checked into `public/assets/` (see the README there for filenames). Each is used if present and falls back to an on-brand placeholder if ever removed — no code changes needed either way.
 
 Vehicle photos, the showroom/team photo, and the location map are still styled placeholders (`[ ... ]` boxes) — swap `components/VehicleCard.tsx`, `components/PhotoPlaceholder.tsx` usages, and the map block in `app/page.tsx` once real photos/an embed are available.
 
